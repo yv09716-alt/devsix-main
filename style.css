@@ -1981,6 +1981,11 @@ header {
     transition: all 0.3s ease;
 }
 
+.instagram-link,
+.mailto-link{
+    color: white;
+}
+
 .contact-item:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
