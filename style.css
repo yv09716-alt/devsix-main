@@ -625,6 +625,14 @@ header {
     opacity: 0.2;
 }
 
+.card-Bio-Yuri {
+    
+}
+.Card-bio-yuri-img {
+    width: 100px;
+
+}
+
 /* Right Section - Features */
 .principal-right {
     flex: 0 0 280px;
