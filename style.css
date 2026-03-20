@@ -24,6 +24,30 @@ html {
     cursor: url('./icons/normal_select.gif'), auto;
 }
 
+.whatsapp-sticker {
+	position: fixed;
+	right: 2rem;
+	bottom: 2rem;
+	z-index: 200;
+	background: #25d366;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	transition: box-shadow 0.2s, background 0.2s;
+}
+.whatsapp-sticker:hover {
+	background: #128c7e;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+}
+.whatsapp-sticker img {
+	width: 32px;
+	height: 32px;
+}
+
 a,
 button,
 input[type="button"],
