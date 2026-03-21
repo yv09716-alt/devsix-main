@@ -650,11 +650,12 @@ header {
 }
 
 .card-Bio-Yuri {
-    
+    opacity: 0.9;
 }
 .Card-bio-yuri-img {
     width: 100px;
-
+    border-radius: 20px;
+    margin-left: 10px;
 }
 
 /* Right Section - Features */
