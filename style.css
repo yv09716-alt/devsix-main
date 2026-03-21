@@ -646,17 +646,18 @@ header {
     max-width: none;
     object-fit: cover;
     border-radius: 16px;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 
 .Card-bio-yuri-img { width: 100px;
     border-radius: 20px;
     margin-left: 10px;
+   
     
 }
 .Card-bio-yuri-img:hover {
-    box-shadow: #5f1d87 0px 4px 14px;
+    box-shadow: #d400ff 0px 4px 14px;
 }
    
 
