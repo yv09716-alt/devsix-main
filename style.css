@@ -649,14 +649,16 @@ header {
     opacity: 0.2;
 }
 
-.card-Bio-Yuri {
-    opacity: 0.9;
-}
-.Card-bio-yuri-img {
-    width: 100px;
+
+.Card-bio-yuri-img { width: 100px;
     border-radius: 20px;
     margin-left: 10px;
+    
 }
+.Card-bio-yuri-img:hover {
+    box-shadow: #5f1d87 0px 4px 14px;
+}
+   
 
 /* Right Section - Features */
 .principal-right {
