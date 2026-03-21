@@ -29,7 +29,7 @@ html {
 	right: 2rem;
 	bottom: 2rem;
 	z-index: 200;
-	background: #25d366;
+	background: #5e00ca;
 	border-radius: 50%;
 	width: 60px;
 	height: 60px;
@@ -40,8 +40,8 @@ html {
 	transition: box-shadow 0.2s, background 0.2s;
 }
 .whatsapp-sticker:hover {
-	background: #128c7e;
-	box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+	background: #7510d3;
+	box-shadow: 0 4px 16px rgba(186, 0, 233, 0.22);
 }
 .whatsapp-sticker img {
 	width: 32px;
