@@ -1,3 +1,100 @@
+// Briefing Carousel (igual ao de modelos)
+document.addEventListener('DOMContentLoaded', function () {
+		// Adicionar mais produtos/serviços
+		const produtosList = document.getElementById('produtos-list');
+		const addProdutoBtn = document.getElementById('add-produto-btn');
+		if (produtosList && addProdutoBtn) {
+			let produtoCount = 5;
+			addProdutoBtn.addEventListener('click', function () {
+				produtoCount++;
+				const input = document.createElement('input');
+				input.type = 'text';
+				input.name = 'produto' + produtoCount;
+				input.placeholder = produtoCount;
+				produtosList.appendChild(input);
+			});
+		}
+	// Carousel logic
+	const carouselInner = document.querySelector('.briefing-carousel-inner');
+	const slides = document.querySelectorAll('.briefing-slide');
+	const prevBtn = document.getElementById('briefingPrev');
+	const nextBtn = document.getElementById('briefingNext');
+	const dots = document.querySelectorAll('.briefing-carousel-dots .carousel-dot');
+	let currentSlide = 0;
+	const totalSlides = slides.length;
+
+	// Set arrow icons
+	prevBtn.innerHTML = '&#10094;';
+	nextBtn.innerHTML = '&#10095;';
+
+	function updateCarousel() {
+		carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+		dots.forEach((dot, idx) => {
+			dot.classList.toggle('active', idx === currentSlide);
+		});
+	}
+	prevBtn.addEventListener('click', () => {
+		currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+		updateCarousel();
+	});
+	nextBtn.addEventListener('click', () => {
+		currentSlide = (currentSlide + 1) % totalSlides;
+		updateCarousel();
+	});
+	dots.forEach((dot, idx) => {
+		dot.addEventListener('click', () => {
+			currentSlide = idx;
+			updateCarousel();
+		});
+	});
+	updateCarousel();
+
+	// Briefing Form Submission (mailto)
+	document.getElementById('sendBriefingBtn').addEventListener('click', function () {
+		// Find which form has data (prioritize current, fallback to any with empresa filled)
+		const forms = document.querySelectorAll('.briefing-form');
+		let formToSend = null;
+		if (forms[currentSlide].empresa && forms[currentSlide].empresa.value.trim() !== '') {
+			formToSend = forms[currentSlide];
+		} else {
+			for (let f of forms) {
+				if (f.empresa && f.empresa.value.trim() !== '') {
+					formToSend = f;
+					break;
+				}
+			}
+		}
+		if (!formToSend) {
+			alert('Por favor, preencha ao menos o nome da empresa no formulário desejado.');
+			return;
+		}
+		// Montar assunto e corpo do e-mail
+		let tipo = formToSend.querySelector('h3').innerText;
+		let data = new FormData(formToSend);
+		let body = `Tipo de página: ${tipo}%0D%0A`;
+		for (let [key, value] of data.entries()) {
+			// Agrupar checkboxes com mesmo nome
+			if (body.includes(key + ':')) continue;
+			if (formToSend.elements[key] && formToSend.elements[key].type === 'checkbox') {
+				let checked = [];
+				formToSend.querySelectorAll(`input[name="${key}"]:checked`).forEach(cb => checked.push(cb.value));
+				if (checked.length > 0) {
+					body += `${key}: ${checked.join(', ')}%0D%0A`;
+				}
+			} else if (key === 'objetivoOutro' && value) {
+				body += `Outro objetivo: ${value}%0D%0A`;
+			} else if (key.startsWith('produto') && value) {
+				body += `Produto/Serviço: ${value}%0D%0A`;
+			} else if (key.startsWith('cor') && value) {
+				body += `Cor desejada: ${value}%0D%0A`;
+			} else if (value) {
+				body += `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}%0D%0A`;
+			}
+		}
+		let mailto = `mailto:devsix.landingpages@gmail.com?subject=Briefing - ${tipo}&body=${body}`;
+		window.location.href = mailto;
+	});
+});
 const modelos = [
 	{
 		title: "Landing de Alta Conversao",
