@@ -235,8 +235,8 @@
                                     <img src="./img/YURI.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
                                     <img src="./img/JON.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
                                     <img src="./img/DAYANE.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
-                                    <img src="./img/MATHEUS.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
-                                    <img src="./img/CAUE.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
+                                    <img src="./img/Jon.png.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
+                                    <img src="./img/Day.png.jpeg" alt="yuri-img-bio" class="Card-bio-yuri-img">
 
                                 </article>
                                 <br>
@@ -257,127 +257,351 @@
                 </section>
 
                 <section id="briefing" class="onepage-section">
-                    <div class="briefing-container">
-                        <div class="briefing-header">
-                            <span class="briefing-kicker">COMECE SEU PROJETO</span>
-                            <h2>Envie seu <span class="briefing-highlight">briefing</span></h2>
-                            <p>Preencha o formulario abaixo e receba uma proposta personalizada em ate 24h.</p>
-                        </div>
-
-                        <form class="briefing-form" id="briefingForm">
-                            <div class="briefing-grid briefing-grid-two">
+            <h2 class="briefing-h2">Briefing</h2>
+            <div class="carousel briefing-carousel">
+                <button class="carousel-arrow carousel-arrow-left" id="briefingPrev" aria-label="Anterior"></button>
+                <div class="carousel-inner briefing-carousel-inner">
+                    <!-- Slide 1: Landing Page -->
+                    <div class="carousel-item briefing-slide">
+                        <form class="briefing-form" id="form-landing" autocomplete="off">
+                            <h3>Landing Page</h3>
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="briefing-name">Nome completo *</label>
-                                    <input type="text" id="briefing-name" name="briefing-name" placeholder="Seu nome"
-                                        required>
+                                    <label>Nome da empresa:</label>
+                                    <input type="text" name="empresa" required>
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="briefing-email">Email *</label>
-                                    <input type="email" id="briefing-email" name="briefing-email"
-                                        placeholder="seu@email.com" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-whatsapp">WhatsApp *</label>
-                                    <input type="tel" id="briefing-whatsapp" name="briefing-whatsapp"
-                                        placeholder="(11) 99999-9999" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-company">Nome da empresa</label>
-                                    <input type="text" id="briefing-company" name="briefing-company"
-                                        placeholder="Sua empresa">
+                                    <label>Responsável pelo projeto:</label>
+                                    <input type="text" name="responsavel">
                                 </div>
                             </div>
-
-                            <div class="briefing-grid">
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="briefing-segment">Segmento de atuacao *</label>
-                                    <input type="text" id="briefing-segment" name="briefing-segment"
-                                        placeholder="Ex: Alimentacao, Moda, Saude..." required>
+                                    <label>Telefone / WhatsApp:</label>
+                                    <input type="text" name="telefone">
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="briefing-has-site">Ja possui site?</label>
-                                    <select id="briefing-has-site" name="briefing-has-site">
-                                        <option value="">Selecione</option>
-                                        <option value="sim">Sim</option>
-                                        <option value="nao">Nao</option>
-                                        <option value="em-construcao">Em construcao</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-goal">Qual o objetivo principal do site? *</label>
-                                    <select id="briefing-goal" name="briefing-goal" required>
-                                        <option value="">Selecione</option>
-                                        <option value="captacao">Captacao de leads</option>
-                                        <option value="vendas">Vendas online</option>
-                                        <option value="institucional">Presenca institucional</option>
-                                        <option value="portfolio">Portfolio</option>
-                                        <option value="outro">Outro</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-pages">Quais paginas gostaria de ter?</label>
-                                    <input type="text" id="briefing-pages" name="briefing-pages"
-                                        placeholder="Ex: Home, Sobre, Servicos, Contato, Blog...">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-references">Sites de referencia (que voce gosta)</label>
-                                    <input type="text" id="briefing-references" name="briefing-references"
-                                        placeholder="Cole links de sites que te inspiram">
+                                    <label>E-mail:</label>
+                                    <input type="email" name="email">
                                 </div>
                             </div>
-
-                            <div class="briefing-grid briefing-grid-two">
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="briefing-deadline">Prazo desejado</label>
-                                    <select id="briefing-deadline" name="briefing-deadline">
-                                        <option value="">Selecione</option>
-                                        <option value="7">Em ate 7 dias</option>
-                                        <option value="15">Em ate 15 dias</option>
-                                        <option value="30">Em ate 30 dias</option>
-                                        <option value="flexivel">Prazo flexivel</option>
-                                    </select>
+                                    <label>Cidade / Estado:</label>
+                                    <input type="text" name="cidade">
                                 </div>
-
                                 <div class="form-group">
-                                    <label for="briefing-budget">Orcamento estimado</label>
-                                    <select id="briefing-budget" name="briefing-budget">
-                                        <option value="">Selecione</option>
-                                        <option value="ate-1500">Ate R$ 1.500</option>
-                                        <option value="1500-3000">R$ 1.500 a R$ 3.000</option>
-                                        <option value="3000-6000">R$ 3.000 a R$ 6.000</option>
-                                        <option value="acima-6000">Acima de R$ 6.000</option>
-                                    </select>
+                                    <label>Site atual (se tiver):</label>
+                                    <input type="text" name="site">
                                 </div>
                             </div>
-
-                            <div class="briefing-grid">
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="briefing-notes">Observacoes adicionais</label>
-                                    <textarea id="briefing-notes" name="briefing-notes" rows="5"
-                                        placeholder="Alguma informacao importante que devemos saber?"></textarea>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="briefing-files">Logotipo e arquivos</label>
-                                    <div class="briefing-upload">
-                                        <input type="file" id="briefing-files" name="briefing-files" multiple>
-                                        <p>Clique para enviar seu logotipo, imagens ou arquivos</p>
-                                        <small>PNG, JPG, PDF, AI (max. 10MB cada)</small>
-                                    </div>
+                                    <label>Instagram / Redes sociais:</label>
+                                    <input type="text" name="redes">
                                 </div>
                             </div>
-
-                            <button type="submit" class="briefing-submit">Enviar Briefing</button>
+                            <div class="form-group">
+                                <label>Objetivo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="objetivo" value="Captar clientes"> Captar clientes</label>
+                                    <label><input type="checkbox" name="objetivo" value="Vender produtos"> Vender produtos</label>
+                                    <label><input type="checkbox" name="objetivo" value="Mostrar portfólio"> Mostrar portfólio</label>
+                                    <label><input type="checkbox" name="objetivo" value="Divulgar empresa"> Divulgar empresa</label>
+                                    <label><input type="checkbox" name="objetivo" value="Outro"> Outro: <input type="text" name="objetivoOutro" placeholder="Especifique"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Público-Alvo:</label>
+                                <textarea name="publico" rows="2" placeholder="Ex: Homens 20–40 anos / Donos de empresas / Mulheres que gostam de estética."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Produtos ou Serviços (opcional):</label>
+                                <div id="produtos-list">
+                                    <input type="text" name="produto1" placeholder="1">
+                                    <input type="text" name="produto2" placeholder="2">
+                                    <input type="text" name="produto3" placeholder="3">
+                                    <input type="text" name="produto4" placeholder="4">
+                                    <input type="text" name="produto5" placeholder="5">
+                                </div>
+                                <button type="button" id="add-produto-btn" class="add-produto-btn" aria-label="Adicionar produto ou serviço">+</button>
+                            </div>
+                            <div class="form-group">
+                                <label>Identidade Visual:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="identidade" value="Logotipo"> Logotipo</label>
+                                    <label><input type="checkbox" name="identidade" value="Paleta de cores"> Paleta de cores</label>
+                                    <label><input type="checkbox" name="identidade" value="Tipografia definida"> Tipografia definida</label>
+                                    <label><input type="checkbox" name="identidade" value="Manual da marca"> Manual da marca</label>
+                                </div>
+                                <small>Se sim, enviar arquivos por e-mail.</small>
+                            </div>
+                            <div class="form-group">
+                                <label>Cores desejadas:</label>
+                                <input type="text" name="cor1" placeholder="1">
+                                <input type="text" name="cor2" placeholder="2">
+                            </div>
+                            <div class="form-group">
+                                <label>Conteúdo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="conteudo" value="Textos"> Textos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Fotos"> Fotos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Vídeos"> Vídeos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Logo da empresa"> Logo da empresa</label>
+                                    <label><input type="checkbox" name="conteudo" value="Informações da empresa"> Informações da empresa</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Funcionalidades Desejadas:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="funcionalidade" value="Botão WhatsApp"> Botão WhatsApp</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Formulário de contato"> Formulário de contato</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Chat online"> Chat online</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Prazo:</label>
+                                <select name="prazo">
+                                    <option value="">Selecione</option>
+                                    <option value="Básica">Básica</option>
+                                    <option value="Profissional">Profissional</option>
+                                    <option value="Premium">Premium</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Detalhes do cliente:</label>
+                                <textarea name="detalhes" rows="2"></textarea>
+                            </div>
                         </form>
                     </div>
-                </section>
+                    <!-- Slide 2: E-commerce -->
+                    <div class="carousel-item briefing-slide">
+                        <form class="briefing-form" id="form-ecommerce" autocomplete="off">
+                            <h3>E-commerce</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nome da empresa:</label>
+                                    <input type="text" name="empresa" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Responsável pelo projeto:</label>
+                                    <input type="text" name="responsavel">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefone / WhatsApp:</label>
+                                    <input type="text" name="telefone">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail:</label>
+                                    <input type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Cidade / Estado:</label>
+                                    <input type="text" name="cidade">
+                                </div>
+                                <div class="form-group">
+                                    <label>Site atual (se tiver):</label>
+                                    <input type="text" name="site">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Instagram / Redes sociais:</label>
+                                    <input type="text" name="redes">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Objetivo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="objetivo" value="Vender produtos"> Vender produtos</label>
+                                    <label><input type="checkbox" name="objetivo" value="Divulgar empresa"> Divulgar empresa</label>
+                                    <label><input type="checkbox" name="objetivo" value="Outro"> Outro: <input type="text" name="objetivoOutro" placeholder="Especifique"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Público-Alvo:</label>
+                                <textarea name="publico" rows="2" placeholder="Ex: Homens 20–40 anos / Donos de empresas / Mulheres que gostam de estética."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Principais Produtos:</label>
+                                <input type="text" name="produto1" placeholder="1">
+                                <input type="text" name="produto2" placeholder="2">
+                                <input type="text" name="produto3" placeholder="3">
+                                <input type="text" name="produto4" placeholder="4">
+                                <input type="text" name="produto5" placeholder="5">
+                            </div>
+                            <div class="form-group">
+                                <label>Identidade Visual:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="identidade" value="Logotipo"> Logotipo</label>
+                                    <label><input type="checkbox" name="identidade" value="Paleta de cores"> Paleta de cores</label>
+                                    <label><input type="checkbox" name="identidade" value="Tipografia definida"> Tipografia definida</label>
+                                    <label><input type="checkbox" name="identidade" value="Manual da marca"> Manual da marca</label>
+                                </div>
+                                <small>Se sim, enviar arquivos por e-mail.</small>
+                            </div>
+                            <div class="form-group">
+                                <label>Cores desejadas:</label>
+                                <input type="text" name="cor1" placeholder="1">
+                                <input type="text" name="cor2" placeholder="2">
+                            </div>
+                            <div class="form-group">
+                                <label>Conteúdo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="conteudo" value="Textos"> Textos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Fotos"> Fotos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Vídeos"> Vídeos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Logo da empresa"> Logo da empresa</label>
+                                    <label><input type="checkbox" name="conteudo" value="Informações da empresa"> Informações da empresa</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Funcionalidades Desejadas:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="funcionalidade" value="Carrinho de compras"> Carrinho de compras</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Pagamento online"> Pagamento online</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Botão WhatsApp"> Botão WhatsApp</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Formulário de contato"> Formulário de contato</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Chat online"> Chat online</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Prazo:</label>
+                                <select name="prazo">
+                                    <option value="">Selecione</option>
+                                    <option value="Básica">Básica</option>
+                                    <option value="Profissional">Profissional</option>
+                                    <option value="Premium">Premium</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Detalhes do cliente:</label>
+                                <textarea name="detalhes" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Slide 3: Institucional -->
+                    <div class="carousel-item briefing-slide">
+                        <form class="briefing-form" id="form-institucional" autocomplete="off">
+                            <h3>Página Institucional</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nome da empresa:</label>
+                                    <input type="text" name="empresa" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Responsável pelo projeto:</label>
+                                    <input type="text" name="responsavel">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Telefone / WhatsApp:</label>
+                                    <input type="text" name="telefone">
+                                </div>
+                                <div class="form-group">
+                                    <label>E-mail:</label>
+                                    <input type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Cidade / Estado:</label>
+                                    <input type="text" name="cidade">
+                                </div>
+                                <div class="form-group">
+                                    <label>Site atual (se tiver):</label>
+                                    <input type="text" name="site">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Instagram / Redes sociais:</label>
+                                    <input type="text" name="redes">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Objetivo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="objetivo" value="Divulgar empresa"> Divulgar empresa</label>
+                                    <label><input type="checkbox" name="objetivo" value="Mostrar portfólio"> Mostrar portfólio</label>
+                                    <label><input type="checkbox" name="objetivo" value="Outro"> Outro: <input type="text" name="objetivoOutro" placeholder="Especifique"></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Público-Alvo:</label>
+                                <textarea name="publico" rows="2" placeholder="Ex: Homens 20–40 anos / Donos de empresas / Mulheres que gostam de estética."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Principais Serviços:</label>
+                                <input type="text" name="produto1" placeholder="1">
+                                <input type="text" name="produto2" placeholder="2">
+                                <input type="text" name="produto3" placeholder="3">
+                                <input type="text" name="produto4" placeholder="4">
+                                <input type="text" name="produto5" placeholder="5">
+                            </div>
+                            <div class="form-group">
+                                <label>Identidade Visual:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="identidade" value="Logotipo"> Logotipo</label>
+                                    <label><input type="checkbox" name="identidade" value="Paleta de cores"> Paleta de cores</label>
+                                    <label><input type="checkbox" name="identidade" value="Tipografia definida"> Tipografia definida</label>
+                                    <label><input type="checkbox" name="identidade" value="Manual da marca"> Manual da marca</label>
+                                </div>
+                                <small>Se sim, enviar arquivos por e-mail.</small>
+                            </div>
+                            <div class="form-group">
+                                <label>Cores desejadas:</label>
+                                <input type="text" name="cor1" placeholder="1">
+                                <input type="text" name="cor2" placeholder="2">
+                            </div>
+                            <div class="form-group">
+                                <label>Conteúdo do Site:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="conteudo" value="Textos"> Textos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Fotos"> Fotos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Vídeos"> Vídeos</label>
+                                    <label><input type="checkbox" name="conteudo" value="Logo da empresa"> Logo da empresa</label>
+                                    <label><input type="checkbox" name="conteudo" value="Informações da empresa"> Informações da empresa</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Funcionalidades Desejadas:</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="funcionalidade" value="Botão WhatsApp"> Botão WhatsApp</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Formulário de contato"> Formulário de contato</label>
+                                    <label><input type="checkbox" name="funcionalidade" value="Chat online"> Chat online</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Prazo:</label>
+                                <select name="prazo">
+                                    <option value="">Selecione</option>
+                                    <option value="Básica">Básica</option>
+                                    <option value="Profissional">Profissional</option>
+                                    <option value="Premium">Premium</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Detalhes do cliente:</label>
+                                <textarea name="detalhes" rows="2"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-arrow-right" id="briefingNext" aria-label="Próximo"></button>
+            </div>
+            <div class="carousel-dots briefing-carousel-dots">
+                <button class="carousel-dot active" data-slide="0"></button>
+                <button class="carousel-dot" data-slide="1"></button>
+                <button class="carousel-dot" data-slide="2"></button>
+            </div>
+            <button class="briefing-send-btn" id="sendBriefingBtn">Enviar Briefing</button>
+        </section>
 
                 <section id="ajuda" class="onepage-section">
                     <div class="faq-container">
